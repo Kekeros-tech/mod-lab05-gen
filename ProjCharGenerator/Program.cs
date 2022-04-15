@@ -249,18 +249,18 @@ namespace generator
                     resultOfWork = (generator as WordBigramGenerator).getRecording();
                     break;
             }
-            filename = "../../../../work_results/" + filename;
+            filename = "../../work_results/" + filename;
             File.WriteAllText(filename, resultOfWork);
         }
         static void Main(string[] args)
         {
-            BigramGenerator generator = new BigramGenerator("../../../../sources/BG.txt");
+            BigramGenerator generator = new BigramGenerator("../../sources/BG.txt");
             writeToFile("BigramGenerator.txt", generator);
 
-            WordGenerator generator1 = new WordGenerator("../../../../sources/Words.txt");
+            WordGenerator generator1 = new WordGenerator("../../sources/Words.txt");
             writeToFile("WordGenerator.txt", generator1);
 
-            WordBigramGenerator generator2 = new WordBigramGenerator("../../../../sources/WB.txt");
+            WordBigramGenerator generator2 = new WordBigramGenerator("../../sources/WB.txt");
             writeToFile("WordBigramGenerator.txt", generator2);
         }
     }
